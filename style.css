@@ -1,0 +1,1681 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #202123;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* MAIN CONTAINER */
+.container {
+    width: 100%;
+    max-width: 1000px;
+    height: 90vh;
+
+    background: #343541;
+    border-radius: 12px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 0 15px rgba(0, 255, 170, 0.2),
+                0 0 40px rgba(0, 255, 170, 0.1);
+
+    border: 1px solid rgba(0, 255, 170, 0.2);
+}
+
+/* TITLE */
+h1 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #00ffcc;
+
+    text-shadow: 0 0 10px rgba(0,255,204,0.6),
+                 0 0 20px rgba(0,255,204,0.4);
+}
+
+/* WELCOME TEXT */
+.welcome {
+    text-align: center;
+    color: #cccccc;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+/* CHAT BOX (EXPANDED) */
+#chatBox {
+    flex: 1;
+    width: 100%;
+
+    background: #444654;
+    overflow-y: auto;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+
+    border: 1px solid rgba(0, 255, 170, 0.15);
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.4);
+}
+
+/* INPUT AREA */
+.input-area {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+}
+
+/* INPUT */
+#userInput {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* SEND BUTTON */
+#sendBtn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #10a37f;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+
+    box-shadow: 0 0 10px rgba(16, 163, 127, 0.5);
+    transition: 0.3s;
+}
+
+#sendBtn:hover {
+    background: #0d8f6d;
+    box-shadow: 0 0 20px rgba(16, 163, 127, 0.8);
+    transform: scale(1.05);
+}
+/* ===== FUTURE AI ANIMATION ===== */
+
+
+/* Animated Background */
+
+body {
+    background:
+    linear-gradient(
+        120deg,
+        #202123,
+        #111827,
+        #202123
+    );
+
+    background-size: 300% 300%;
+
+    animation: backgroundMove 10s infinite alternate;
+}
+
+
+@keyframes backgroundMove {
+
+    0% {
+        background-position: left;
+    }
+
+    100% {
+        background-position: right;
+    }
+
+}
+
+
+
+/* AI Container Floating Effect */
+
+.container {
+
+    animation:
+    containerFloat 4s ease-in-out infinite;
+
+
+}
+
+
+@keyframes containerFloat {
+
+
+    0%,100% {
+
+        transform: translateY(0);
+
+    }
+
+
+    50% {
+
+        transform: translateY(-8px);
+
+    }
+
+}
+
+
+
+/* Neon Border Animation */
+
+.container {
+
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.container::before {
+
+
+    content:"";
+
+    position:absolute;
+
+    top:-50%;
+
+    left:-50%;
+
+
+    width:200%;
+
+    height:200%;
+
+
+    background:
+    conic-gradient(
+        transparent,
+        #00ffcc,
+        transparent,
+        #00ffcc
+    );
+
+
+    animation:
+    rotateBorder 6s linear infinite;
+
+
+    z-index:-1;
+
+
+}
+
+
+
+@keyframes rotateBorder {
+
+
+    100% {
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+
+/* Title Animation */
+
+
+h1 {
+
+
+    animation:
+    titleGlow 2s infinite alternate;
+
+
+}
+
+
+
+@keyframes titleGlow {
+
+
+    from {
+
+        text-shadow:
+        0 0 10px #00ffcc;
+
+    }
+
+
+    to {
+
+
+        text-shadow:
+        0 0 30px #00ffcc,
+        0 0 50px #00ffcc;
+
+    }
+
+}
+
+
+
+
+/* Chat Messages Animation */
+
+
+#chatBox p {
+
+
+    animation:
+    messageShow 0.5s ease;
+
+
+}
+
+
+
+@keyframes messageShow {
+
+
+    from {
+
+
+        opacity:0;
+
+        transform:
+        translateX(-40px);
+
+    }
+
+
+    to {
+
+
+        opacity:1;
+
+        transform:
+        translateX(0);
+
+    }
+
+}
+
+
+
+
+/* Input Glow */
+
+
+#userInput {
+
+
+    transition:0.4s;
+
+
+}
+
+
+
+#userInput:focus {
+
+
+    box-shadow:
+
+    0 0 15px #00ffcc;
+
+
+    transform:
+    scale(1.02);
+
+}
+
+
+
+
+/* Send Button AI Pulse */
+
+
+#sendBtn {
+
+
+    animation:
+    buttonPulse 2s infinite;
+
+
+}
+
+
+
+@keyframes buttonPulse {
+
+
+    0% {
+
+
+        box-shadow:
+        0 0 5px #10a37f;
+
+
+    }
+
+
+    50% {
+
+
+        box-shadow:
+        0 0 30px #10a37f;
+
+
+    }
+
+
+    100% {
+
+
+        box-shadow:
+        0 0 5px #10a37f;
+
+
+    }
+
+}
+
+
+
+/* Smooth Scroll */
+
+#chatBox {
+
+    scroll-behavior:smooth;
+
+}
+/* =========================
+   ADVANCED AI INTERFACE FX
+========================= */
+
+
+/* Moving Cyber Background */
+
+body {
+
+    overflow:hidden;
+
+}
+
+
+body::before {
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent 95%,
+        rgba(0,255,204,0.15) 100%
+    );
+
+
+    background-size:60px 60px;
+
+
+    animation:
+    gridMove 8s linear infinite;
+
+
+    z-index:-1;
+
+}
+
+
+@keyframes gridMove {
+
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+
+    to{
+
+        transform:translateY(60px);
+
+    }
+
+}
+
+
+
+/* AI Container Hologram */
+
+.container {
+
+
+    backdrop-filter:blur(15px);
+
+
+    animation:
+    hologram 4s infinite;
+
+
+}
+
+
+
+@keyframes hologram {
+
+
+    0%,100%{
+
+        filter:
+        drop-shadow(0 0 10px #00ffcc);
+
+    }
+
+
+    50%{
+
+        filter:
+        drop-shadow(0 0 35px #00ffcc);
+
+    }
+
+}
+
+
+
+
+/* Scanning Line Effect */
+
+
+.container::after {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    left:0;
+
+
+    width:100%;
+
+
+    height:3px;
+
+
+    background:#00ffcc;
+
+
+    opacity:.5;
+
+
+    animation:
+    scan 5s infinite;
+
+
+}
+
+
+
+@keyframes scan {
+
+
+    0%{
+
+        top:0;
+
+    }
+
+
+    50%{
+
+        top:100%;
+
+    }
+
+
+    100%{
+
+        top:0;
+
+    }
+
+
+}
+
+
+
+
+
+/* AI Message Appearance */
+
+
+#chatBox p {
+
+
+    position:relative;
+
+
+    animation:
+    aiMessage .6s ease;
+
+
+    padding:8px;
+
+
+    margin-bottom:10px;
+
+
+}
+
+
+
+@keyframes aiMessage {
+
+
+    from{
+
+
+        opacity:0;
+
+
+        transform:
+        translateY(30px)
+        scale(.8);
+
+
+    }
+
+
+    to{
+
+
+        opacity:1;
+
+
+        transform:
+        translateY(0)
+        scale(1);
+
+
+    }
+
+}
+
+
+
+
+
+/* Typing Cursor */
+
+
+#chatBox p:last-child::after {
+
+
+    content:"|";
+
+
+    animation:
+    cursorBlink .7s infinite;
+
+
+}
+
+
+
+@keyframes cursorBlink {
+
+
+    50%{
+
+        opacity:0;
+
+    }
+
+}
+
+
+
+
+/* Input Cyber Glow */
+
+
+#userInput {
+
+
+    background:#1e1f25;
+
+
+    color:white;
+
+
+    border:
+    1px solid #00ffcc;
+
+
+}
+
+
+
+#userInput:focus {
+
+
+    animation:
+    inputPulse 1.5s infinite;
+
+
+}
+
+
+
+@keyframes inputPulse {
+
+
+    50%{
+
+
+        box-shadow:
+        0 0 25px #00ffcc;
+
+
+    }
+
+}
+
+
+
+
+
+/* AI Send Button */
+
+
+#sendBtn {
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+#sendBtn::before {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:0;
+
+
+    height:0;
+
+
+    background:white;
+
+
+    border-radius:50%;
+
+
+    transform:translate(-50%,-50%);
+
+
+    transition:.5s;
+
+
+}
+
+
+
+#sendBtn:hover::before {
+
+
+    width:250px;
+
+
+    height:250px;
+
+
+    opacity:.2;
+
+
+}
+
+
+
+
+/* Smooth Neon Scroll */
+
+
+#chatBox {
+
+
+    scrollbar-width:thin;
+
+
+    scrollbar-color:#00ffcc transparent;
+
+
+}
+
+
+/* Mobile Animation Optimization */
+
+@media(max-width:600px){
+
+
+    .container::after{
+
+        animation-duration:8s;
+
+    }
+
+
+}
+/* ===============================
+   JARVIS HUD FACE INTERFACE
+================================ */
+
+
+.container {
+
+    position:relative;
+    overflow:hidden;
+
+}
+
+
+
+/* AI FACE HOLOGRAM */
+
+.container::before {
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+
+    border-radius:50%;
+
+
+    border:
+
+    2px solid rgba(0,255,204,0.5);
+
+
+    box-shadow:
+
+    0 0 20px #00ffcc,
+
+    inset 0 0 30px rgba(0,255,204,0.4);
+
+
+    animation:
+
+    facePulse 3s infinite;
+
+
+    pointer-events:none;
+
+}
+
+
+
+@keyframes facePulse {
+
+
+    0%,100%{
+
+        opacity:.3;
+
+        transform:
+        translate(-50%,-50%)
+        scale(1);
+
+    }
+
+
+    50%{
+
+        opacity:.8;
+
+        transform:
+        translate(-50%,-50%)
+        scale(1.15);
+
+    }
+
+}
+
+
+
+/* HUD ROTATING RING */
+
+
+.container::after {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:260px;
+
+
+    height:260px;
+
+
+    left:50%;
+
+
+    top:50%;
+
+
+    transform:
+    translate(-50%,-50%);
+
+
+    border-radius:50%;
+
+
+    border:
+
+    2px dashed #00ffcc;
+
+
+    animation:
+
+    rotateHUD 10s linear infinite;
+
+
+    opacity:.4;
+
+
+    pointer-events:none;
+
+
+}
+
+
+
+@keyframes rotateHUD {
+
+
+    from{
+
+        transform:
+        translate(-50%,-50%)
+        rotate(0deg);
+
+    }
+
+
+    to{
+
+        transform:
+        translate(-50%,-50%)
+        rotate(360deg);
+
+    }
+
+}
+
+
+
+
+/* HUD EYES */
+
+
+.welcome::before {
+
+
+    content:"◉        ◉";
+
+
+    display:block;
+
+
+    font-size:35px;
+
+
+    letter-spacing:20px;
+
+
+    color:#00ffcc;
+
+
+    text-shadow:
+
+    0 0 15px #00ffcc;
+
+
+    animation:
+
+    eyeGlow 2s infinite;
+
+
+}
+
+
+
+@keyframes eyeGlow {
+
+
+    50%{
+
+
+        opacity:.4;
+
+
+    }
+
+}
+
+
+
+/* SCANNING LINE */
+
+
+.container {
+
+
+    background:
+
+    linear-gradient(
+
+    180deg,
+
+    transparent,
+
+    rgba(0,255,204,.08),
+
+    transparent
+
+    );
+
+
+}
+
+
+
+.container .scan {
+
+
+    position:absolute;
+
+}
+
+
+
+
+
+/* AI HUD CORNER MARKS */
+
+
+.container {
+
+
+    border:
+
+    1px solid rgba(0,255,204,.5);
+
+
+}
+
+
+
+.container h1 {
+
+
+    letter-spacing:3px;
+
+
+    animation:
+
+    hudText 2s infinite alternate;
+
+
+}
+
+
+
+@keyframes hudText {
+
+
+    from{
+
+        opacity:.7;
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        text-shadow:
+
+        0 0 25px #00ffcc;
+
+    }
+
+}
+
+
+
+
+/* CHAT HUD EFFECT */
+
+
+#chatBox {
+
+
+    background:
+
+    radial-gradient(
+
+    circle,
+
+    rgba(0,255,204,.15),
+
+    #444654 60%
+
+    );
+
+
+    animation:
+
+    hudBackground 5s infinite;
+
+
+}
+
+
+
+@keyframes hudBackground {
+
+
+    50%{
+
+        background-position:
+
+        100% 100%;
+
+    }
+
+}
+/* ==================================
+   JARVIS CENTRAL AI CORE HUD
+================================== */
+
+
+.jarvis-core {
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:300px;
+    height:300px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    pointer-events:none;
+
+    opacity:.65;
+
+}
+
+
+
+/* MAIN GLOW CORE */
+
+.jarvis-core::before {
+
+
+    content:"";
+
+
+    width:70px;
+    height:70px;
+
+
+    position:absolute;
+
+
+    border-radius:50%;
+
+
+    background:
+
+    radial-gradient(
+        circle,
+        #ffffff,
+        #00ffcc 30%,
+        transparent 70%
+    );
+
+
+    box-shadow:
+
+    0 0 20px #00ffcc,
+    0 0 60px #00ffcc,
+    0 0 100px rgba(0,255,204,.8);
+
+
+    animation:
+
+    corePulse 1.5s infinite;
+
+
+}
+
+
+
+@keyframes corePulse {
+
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+
+    50%{
+
+        transform:scale(1.4);
+
+    }
+
+}
+
+
+
+
+
+/* HUD ROTATING RINGS */
+
+
+.hud-ring {
+
+
+    position:absolute;
+
+
+    border-radius:50%;
+
+
+    border:2px solid rgba(0,255,204,.5);
+
+
+}
+
+
+
+.ring1 {
+
+
+    width:120px;
+    height:120px;
+
+
+    border-left-color:transparent;
+
+
+    animation:
+
+    rotate1 4s linear infinite;
+
+}
+
+
+
+.ring2 {
+
+
+    width:190px;
+    height:190px;
+
+
+    border-right-color:transparent;
+
+
+    animation:
+
+    rotate2 7s linear infinite;
+
+}
+
+
+
+.ring3 {
+
+
+    width:270px;
+    height:270px;
+
+
+    border-top-color:transparent;
+
+
+    border-style:dashed;
+
+
+    animation:
+
+    rotate1 12s linear infinite;
+
+}
+
+
+
+
+@keyframes rotate1 {
+
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+
+@keyframes rotate2 {
+
+
+    from{
+
+        transform:rotate(360deg);
+
+    }
+
+
+    to{
+
+        transform:rotate(0deg);
+
+    }
+
+}
+
+
+
+
+
+/* AI EYE */
+
+
+.ai-eye {
+
+
+    position:absolute;
+
+
+    width:90px;
+
+    height:35px;
+
+
+    background:
+
+    linear-gradient(
+        90deg,
+        transparent,
+        #00ffcc,
+        transparent
+    );
+
+
+    border-radius:50%;
+
+
+    filter:
+
+    drop-shadow(
+    0 0 20px #00ffcc
+    );
+
+
+    animation:
+
+    eyeMove 2s infinite;
+
+
+}
+
+
+
+.ai-eye span {
+
+
+    display:block;
+
+
+    width:15px;
+
+    height:15px;
+
+
+    background:white;
+
+
+    border-radius:50%;
+
+
+    margin:auto;
+
+
+    margin-top:10px;
+
+
+    box-shadow:
+
+    0 0 20px white;
+
+
+}
+
+
+
+@keyframes eyeMove {
+
+
+    0%,100%{
+
+        transform:
+        scaleX(.5);
+
+    }
+
+
+    50%{
+
+        transform:
+        scaleX(1.2);
+
+    }
+
+}
+
+
+
+
+
+/* SCAN BEAM */
+
+
+.jarvis-core::after {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:280px;
+
+    height:2px;
+
+
+    background:#00ffcc;
+
+
+    box-shadow:
+
+    0 0 20px #00ffcc;
+
+
+    animation:
+
+    scanBeam 3s infinite;
+
+
+}
+
+
+
+@keyframes scanBeam {
+
+
+    0%{
+
+        transform:translateY(-140px);
+
+    }
+
+
+    50%{
+
+        transform:translateY(140px);
+
+    }
+
+
+    100%{
+
+        transform:translateY(-140px);
+
+    }
+
+}
+/* =========================
+   AI PASSWORD LOCK SCREEN
+========================= */
+
+
+#lockScreen {
+
+    position:fixed;
+
+    inset:0;
+
+    background:#202123;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+
+
+.lock-box {
+
+
+    width:350px;
+
+    padding:30px;
+
+
+    background:#343541;
+
+
+    border-radius:15px;
+
+
+    text-align:center;
+
+
+    border:1px solid #00ffcc;
+
+
+    box-shadow:
+
+    0 0 20px #00ffcc,
+
+    inset 0 0 30px rgba(0,255,204,.2);
+
+
+    animation:
+
+    lockGlow 3s infinite;
+
+
+}
+
+
+
+.lock-box h2 {
+
+
+    color:#00ffcc;
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+.lock-box input {
+
+
+    width:100%;
+
+
+    padding:12px;
+
+
+    margin:15px 0;
+
+
+    border-radius:8px;
+
+
+    border:none;
+
+
+    outline:none;
+
+
+    font-size:16px;
+
+
+}
+
+
+
+.lock-box button {
+
+
+    width:100%;
+
+
+    padding:12px;
+
+
+    border:none;
+
+
+    border-radius:8px;
+
+
+    background:#10a37f;
+
+
+    color:white;
+
+
+    cursor:pointer;
+
+
+    font-size:16px;
+
+
+}
+
+
+
+.lock-box button:hover {
+
+
+    box-shadow:
+
+    0 0 25px #00ffcc;
+
+
+}
+
+
+
+#errorMsg {
+
+
+    color:red;
+
+    margin-top:10px;
+
+
+}
+
+
+
+@keyframes lockGlow {
+
+
+    50%{
+
+        box-shadow:
+
+        0 0 40px #00ffcc;
+
+    }
+
+}
